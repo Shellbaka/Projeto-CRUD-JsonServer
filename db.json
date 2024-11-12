@@ -1,6 +1,8 @@
 {
 
-    "pages": [
-    "olá, crinças"
+    "posts": [ {
+
+        "title": "olá, crinças"
+    }
     ]
 }
