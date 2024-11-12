@@ -20,7 +20,10 @@ export function Feed() {
 
   return (
     <div className="feedContainer">
-      <Card />
+      {posts.map((post) => (
+        <Card key={post.id} post={post}/>
+      ))}
+      
     </div>
   );
 }
