@@ -4,7 +4,7 @@ import "./styles.css";
 export function CreatePost() {
   return (
     <div>
-      <Form />
+      <Form title={'Editar publicação'} textButton={'Editar'} />
     </div>
   );
 }

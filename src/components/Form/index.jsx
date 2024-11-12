@@ -1,22 +1,30 @@
 import "./styles.css";
+import { useForm } from "react-hook-form";
 
-export function Form() {
+export function Form({title, textButton}) {
+  
+  const {register, handleSubmit, reset} = useForm ()
+  function handleCreatedPost (data) {
+    console.log("Post criado!!!" , data);
+    reset();
+  }
+
   return (
-    <form>
-      <h2>Título</h2>
+    <form onSubmit={handleSubmit(handleCreatedPost)}>
+      <h2>{title}</h2>
       <div className="field">
-        <input placeholder="Título" />
+        <input placeholder="Título" {...register("title")}/>
       </div>
 
       <div className="field">
-        <input placeholder="Descrição" />
+        <input placeholder="Descrição" {...register("description")}/>
       </div>
 
       <div className="field">
-        <textarea placeholder="Descrição" />
+        <textarea placeholder="Conteúdo" />
       </div>
 
-      <button>Botão</button>
+      <button>{textButton}</button>
     </form>
   );
 }
