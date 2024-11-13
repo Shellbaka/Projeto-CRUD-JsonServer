@@ -11,7 +11,7 @@ return(
 <Routes>
     <Route path="/" element={<Feed/>} />
     <Route path="/createPost" element={<CreatePost/>} />
-    <Route path="/updatePost" element={<UpdatePost/>} />
+    <Route path="/updatePost/:id" element={<UpdatePost/>} />
     <Route path="/onePost" element={<OnePost/>} />
 </Routes>
 );
