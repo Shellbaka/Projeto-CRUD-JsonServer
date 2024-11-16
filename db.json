@@ -1,12 +1,6 @@
 {
   "posts": [
     {
-      "title": "turu",
-      "description": "turu",
-      "content": "tururu",
-      "id": "1"
-    },
-    {
       "id": "2",
       "title": "Shrek é o melhor filme mas ratatouille...",
       "description": "Cara, simplesmente ratatouille é absurdo de bom."
@@ -15,54 +9,6 @@
       "id": "3",
       "title": "Me conceda um humilde 10 por favor professor Diogo",
       "description": "Razões do porque me dar um 10, porque o senhor chegou até aqui, porque há bondade nesse seu coração, porque há paz habitando seu ser, e porque isso deu muito trabalho slk."
-    },
-    {
-      "id": "4",
-      "title": "eq",
-      "description": "eq",
-      "content": "eq"
-    },
-    {
-      "id": "5",
-      "title": "ee",
-      "description": "ee",
-      "content": ""
-    },
-    {
-      "id": "6",
-      "title": "ew",
-      "description": "ew",
-      "content": "ew"
-    },
-    {
-      "id": "00d1",
-      "title": "e",
-      "description": "e",
-      "content": "e"
-    },
-    {
-      "id": "120f",
-      "title": "enon",
-      "description": "enonnn",
-      "content": "e um non"
-    },
-    {
-      "id": "4d2b",
-      "title": "Sapos",
-      "description": "Muitos sapos",
-      "content": "de verdade"
-    },
-    {
-      "id": "a4a9",
-      "title": "novas crianças",
-      "description": "novas",
-      "content": "sim"
-    },
-    {
-      "id": "3cc2",
-      "title": "novas crianças",
-      "description": "novas",
-      "content": "ideias"
     }
   ]
 }

@@ -18,12 +18,17 @@ export function Feed() {
       });
   }, []);
 
+  function handleDeletePost(id) {
+    setPosts(posts.filter((post) => post.id !== id));
+    api.delete(`/posts/${id}`);
+    console.log("clicaram em mim");
+  }
+
   return (
     <div className="feedContainer">
       {posts.map((post) => (
-        <Card key={post.id} post={post}/>
+        <Card key={post.id} post={post} onDeletePost={handleDeletePost} />
       ))}
-      
     </div>
   );
 }
