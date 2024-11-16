@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form";
 import { api } from "../../lib/axios";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { MdDescription } from "react-icons/md";
-import {useNavigate} from 'react-router-dom'
+import { useParams} from 'react-router-dom'
+import { useEffect } from "react";
 
 const postSchema = yup.object({
   title: yup.string().required('Informe um título'),
@@ -12,22 +12,26 @@ const postSchema = yup.object({
   content: yup.string().required('Coloque o conteúdo'),
 });
 
-export function Form({ title, textButton }) {
+export function Form({ title, textButton, onAction }) {
 
-  const navigate=useNavigate();
+const {id} = useParams();
+
 
   const { register, handleSubmit, reset, formState:{errors} } = useForm({
     resolver: yupResolver(postSchema),
   });
-  function handleCreatePost(data) {
-    api.post("./posts", data);
-    console.log("Criado com sucesso");
-    navigate('/');
-    reset();
-  }
+  
+async function getDataUpdate() {
+  const response = await get.api(`/posts/${id}`);
+  reset(response.data);
+}
+
+useEffect(()=>{
+  getDataUpdate()
+},[]);
 
   return (
-    <form onSubmit={handleSubmit(handleCreatePost)}>
+    <form onSubmit={handleSubmit(onAction)}>
       <h2>{title}</h2>
       <div className="field">
         <input placeholder="Título" {...register("title")} />
